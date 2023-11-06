@@ -34,4 +34,5 @@ jobs:
         binary_name: "pertaas-couchbase-go"
         pre_command: go mod tidy
         release_name: 0.1
+        release_tag: 0.1
         overwrite: true
