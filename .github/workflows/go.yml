@@ -37,3 +37,4 @@ jobs:
         pre_command: go mod tidy
         release_tag: dev
         overwrite: true
+        compress_assets: off
