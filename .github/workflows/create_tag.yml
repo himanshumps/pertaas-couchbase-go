@@ -4,7 +4,7 @@ on:
     
 jobs:
   create-tag:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
@@ -13,6 +13,6 @@ jobs:
       - name: Create Tag
         uses: negz/create-tag@v1
         with:
-          version: 1.0
+          version: dev
           message: "Version 1.0"
           token: ${{ secrets.GITHUB_TOKEN }}
