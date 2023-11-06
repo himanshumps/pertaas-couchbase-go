@@ -4,19 +4,15 @@ on:
     
 jobs:
   create-tag:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - uses: rickstaa/action-create-tag@v1
-        id: "tag_create"
-        with:
-          tag: "0.1"
-          tag_exists_error: false
-          message: "0.1 release"
-          github_token: "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"
+    runs-on: ubuntu-18.04
 
-      # Print result using the env variable.
-      -  run: |
-          echo "Tag already present: ${{ env.TAG_EXISTS }}"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Create Tag
+        uses: negz/create-tag@v1
+        with:
+          version: 1.0
+          message: "Version 1.0"
+          token: ${{ secrets.GITHUB_TOKEN }}
