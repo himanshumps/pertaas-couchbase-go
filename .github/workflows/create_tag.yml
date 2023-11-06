@@ -15,6 +15,7 @@ jobs:
           tag: "0.1"
           tag_exists_error: false
           message: "0.1 release"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
       # Print result using the env variable.
       -  run: |
