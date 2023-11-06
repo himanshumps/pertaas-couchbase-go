@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	gocb.SetLogger(gocb.VerboseStdioLogger())
+	//gocb.SetLogger(gocb.VerboseStdioLogger())
 	var jobId string
 	var message string
 	type Message struct {
