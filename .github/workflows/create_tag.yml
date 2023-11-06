@@ -13,6 +13,6 @@ jobs:
       - name: Create Tag
         uses: negz/create-tag@v1
         with:
-          version: v0.1
-          message: "Version 1.0"
+          version: v0.0.1
+          message: "Version 0.0.1"
           token: ${{ secrets.GITHUB_TOKEN }}
